@@ -6,6 +6,7 @@ import spark.template.velocity.*;
 import java.util.Map;
 import pe.softweb.handlers.EstadoUsuarioHandler;
 import pe.softweb.handlers.SistemaHandler;
+import pe.softweb.utils.Constantes;
 
 public class App{
     public static void main(String[] args) {
@@ -46,6 +47,7 @@ public class App{
     }   
     
     public static String renderTemplate(String template, Map model) {
+    		model.put("constantes", Constantes.getMapita());
         return new VelocityTemplateEngine().render(new ModelAndView(model, template));
     }
 }
