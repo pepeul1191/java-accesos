@@ -10,8 +10,7 @@
 <body>
     <h1>Hola mundo</h1>
     $constantes.get("STATIC_URL")bower_components/index.css
-    <i class="fa fa-user-o" aria-hidden="true"></i>
-    
+    <button type="button" class="btn btn-success"><i class="fa fa-user-o" aria-hidden="true"></i>Success</button>
     
     <script src="$constantes.get("STATIC_URL")bower_components/jquery/dist/jquery.min.js"></script>
     <script src="$constantes.get("STATIC_URL")bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
