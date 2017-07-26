@@ -1,0 +1,4 @@
+/src/main/resources/public/bower_components
+/target/classes/pe*
+/target/classes/public
+/target/classes/templates*

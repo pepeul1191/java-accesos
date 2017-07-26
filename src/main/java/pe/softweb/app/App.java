@@ -31,7 +31,7 @@ public class App{
 	        response.header("Access-Control-Allow-Origin", "*");
 	        response.header("Access-Control-Request-Method",  "*");
 	        response.header("Access-Control-Allow-Headers",  "*");
-	        response.header("Server",  "Ubuntu");
+	        response.header("Server",  "Ubuntu, Jetty");
 	        // Note: this may or may not be necessary in your particular application
 	        //response.type("application/json");
 	    });
