@@ -17,6 +17,7 @@ public class App{
 	    	staticFiles.header("Access-Control-Allow-Origin", "*");
 	    	staticFiles.header("Access-Control-Request-Method",  "*");
 	    	staticFiles.header("Access-Control-Allow-Headers",  "*");
+	    	staticFiles.expireTime(600);
 	    	port(2000);
 	    	
 	    	options("/*", (request, response) -> {
@@ -44,6 +45,7 @@ public class App{
 	    });
 	    
 		get("/departamentos", DepartamentoHandler.index);
+		get("/departamento/buscar", DepartamentoHandler.buscar);
 		get("/sistema", SistemaHandler.index);
 	    	get("/sistema/listar", SistemaHandler.listar);
 	    	get("/estado_usuario/listar", EstadoUsuarioHandler.listar);

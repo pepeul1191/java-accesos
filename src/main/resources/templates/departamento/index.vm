@@ -1,5 +1,5 @@
-<h1>Departamentos</h1>
-
-<h1>Hola mundo</h1>
-$constantes.get("STATIC_URL")bower_components/index.css
-<button type="button" class="btn btn-success"><i class="fa fa-user-o" aria-hidden="true"></i>Success</button>
+<div class="container">
+	<label>Escriba el nombre de un distrito, id de distrito : </label><label style="color:red" id="distrito_id"></label><br>
+	<input type="text" name="nombre" id="txtNombre" style="width: 500px">
+	<ul id="coincidencias"></ul>
+</div>
