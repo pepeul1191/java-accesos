@@ -6,7 +6,7 @@ import spark.template.velocity.*;
 import java.util.Map;
 
 import pe.softweb.handlers.DepartamentoHandler;
-import pe.softweb.handlers.EstadoUsuarioHandler;
+import pe.softweb.handlers.HomeHandler;
 import pe.softweb.handlers.SistemaHandler;
 import pe.softweb.utils.Constantes;
 
@@ -44,11 +44,11 @@ public class App{
 	        //response.type("application/json");
 	    });
 	    
+		get("/", HomeHandler.index);
 		get("/departamentos", DepartamentoHandler.index);
 		get("/departamento/buscar", DepartamentoHandler.buscar);
 		get("/sistema", SistemaHandler.index);
 	    	get("/sistema/listar", SistemaHandler.listar);
-	    	get("/estado_usuario/listar", EstadoUsuarioHandler.listar);
     }   
     
     public static String renderTemplate(String template, Map model) {
