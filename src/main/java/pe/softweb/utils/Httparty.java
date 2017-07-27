@@ -14,7 +14,7 @@ public class Httparty {
     private String rpta;
 
     public Httparty(String url, String metodo){
-        this.url = url;
+        this.url = url.replace(" ", "%20");
         this.metodo = metodo;
         this.rpta = "";
     }
