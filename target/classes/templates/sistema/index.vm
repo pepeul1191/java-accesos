@@ -1,3 +1,0 @@
-<h1>Hola mundo</h1>
-$constantes.get("STATIC_URL")bower_components/index.css
-<button type="button" class="btn btn-success"><i class="fa fa-user-o" aria-hidden="true"></i>Success</button>

@@ -4,4 +4,7 @@
 /target/classes/templates*
 /node_modules
 /src/main/resources/public/dist
+.project
+.settings
+target
 package-lock.json

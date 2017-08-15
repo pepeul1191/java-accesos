@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: spark-view
+Bundle-SymbolicName: spark-view
+Bundle-Version: 1.0.0.qualifier
