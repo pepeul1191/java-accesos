@@ -7,6 +7,7 @@ import java.util.Map;
 
 import pe.softweb.handlers.DepartamentoHandler;
 import pe.softweb.handlers.HomeHandler;
+import pe.softweb.handlers.ProvinciaHandler;
 import pe.softweb.handlers.SistemaHandler;
 import pe.softweb.utils.Constantes;
 
@@ -48,6 +49,7 @@ public class App{
 		get("/departamentos", DepartamentoHandler.index);
 		get("/departamento/buscar", DepartamentoHandler.buscar);
 		get("/departamento/listar", DepartamentoHandler.listar);
+		get("/provincia/listar/:departamento_id", ProvinciaHandler.listar);
 		get("/sistema", SistemaHandler.index);
 	    get("/sistema/listar", SistemaHandler.listar);
     }   
