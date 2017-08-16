@@ -52,6 +52,7 @@ public class App{
 		get("/departamento/listar", DepartamentoHandler.listar);
 		get("/provincia/listar/:departamento_id", ProvinciaHandler.listar);
 		get("/distrito/listar/:provincia_id", DistritoHandler.listar);
+		get("/distrito/buscar", DistritoHandler.buscar);
 		get("/sistema", SistemaHandler.index);
 	    get("/sistema/listar", SistemaHandler.listar);
     }   
