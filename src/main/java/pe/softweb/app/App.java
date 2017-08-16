@@ -47,8 +47,9 @@ public class App{
 		get("/", HomeHandler.index);
 		get("/departamentos", DepartamentoHandler.index);
 		get("/departamento/buscar", DepartamentoHandler.buscar);
+		get("/departamento/listar", DepartamentoHandler.listar);
 		get("/sistema", SistemaHandler.index);
-	    	get("/sistema/listar", SistemaHandler.listar);
+	    get("/sistema/listar", SistemaHandler.listar);
     }   
     
     public static String renderTemplate(String template, Map model) {

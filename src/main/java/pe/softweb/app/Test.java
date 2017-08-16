@@ -16,11 +16,11 @@ import pe.softweb.utils.Conexion;
 
 public class Test {
 
-	public static void main(String[] args) {
-		Conexion conexion = new Conexion();
-		ConnectionSource connectionSource = conexion.getConnectionSource();
-		
+	public static void main(String[] args) {		
 		try {
+			Conexion conexion = new Conexion();
+			ConnectionSource connectionSource = conexion.getConnectionSource();
+			
 			List<JSONObject> rpta = new ArrayList<JSONObject>();
 			Dao<Departamento, String> departamentoDao = DaoManager.createDao(connectionSource, Departamento.class);
 			QueryBuilder<Departamento, String> queryBuilder = departamentoDao.queryBuilder();

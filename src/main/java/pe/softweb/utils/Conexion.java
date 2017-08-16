@@ -7,13 +7,9 @@ import com.j256.ormlite.support.ConnectionSource;
 
 public class Conexion {
 	private ConnectionSource connectionSource;
-	public Conexion(){
-		String databaseUrl = "jdbc:sqlite:db_ubicaciones.db";
-		try {
-			connectionSource = new JdbcConnectionSource(databaseUrl);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	public Conexion() throws SQLException{
+		String databaseUrl = "jdbc:sqlite:db/db_ubicaciones.db";
+		connectionSource = new JdbcConnectionSource(databaseUrl);
 	}
 	public ConnectionSource getConnectionSource() {
 		return connectionSource;
