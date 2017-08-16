@@ -4,23 +4,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.json.JSONObject;
-
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.support.ConnectionSource;
+import spark.Request;
+import spark.Response;
+import spark.Route;
 
 import pe.softweb.app.App;
 import pe.softweb.models.Departamento;
 import pe.softweb.utils.Conexion;
 import pe.softweb.utils.Constantes;
 import pe.softweb.utils.Httparty;
-import spark.Request;
-import spark.Response;
-import spark.Route;
 
 public class DepartamentoHandler {
 	public static Route index = (Request request, Response response) -> {
