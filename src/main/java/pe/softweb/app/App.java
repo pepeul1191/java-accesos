@@ -6,6 +6,7 @@ import spark.template.velocity.*;
 import java.util.Map;
 
 import pe.softweb.handlers.DepartamentoHandler;
+import pe.softweb.handlers.DistritoHandler;
 import pe.softweb.handlers.HomeHandler;
 import pe.softweb.handlers.ProvinciaHandler;
 import pe.softweb.handlers.SistemaHandler;
@@ -50,6 +51,7 @@ public class App{
 		get("/departamento/buscar", DepartamentoHandler.buscar);
 		get("/departamento/listar", DepartamentoHandler.listar);
 		get("/provincia/listar/:departamento_id", ProvinciaHandler.listar);
+		get("/distrito/listar/:provincia_id", DistritoHandler.listar);
 		get("/sistema", SistemaHandler.index);
 	    get("/sistema/listar", SistemaHandler.listar);
     }   
