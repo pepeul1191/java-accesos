@@ -38,12 +38,12 @@ public class EstadoUsuarioHandler {
             rpta = rptaTemp.toString();
         } catch (Exception e) {
             //e.printStackTrace();
-            JSONObject rptaTemp = new JSONObject();
-            rptaTemp.put("tipo_mensaje", "error");
+            JSONObject rptaTry = new JSONObject();
+            rptaTry.put("tipo_mensaje", "error");
             String[] error = {"Se ha producido un error en  listar los estados de usuario", e.toString()};
-            rptaTemp.put("mensaje", error);
-
-            System.out.println( rptaTemp.toString());
+            rptaTry.put("mensaje", error);
+            System.out.println( rptaTry.toString());
+            return rptaTry;
         }
 
         return rpta;
