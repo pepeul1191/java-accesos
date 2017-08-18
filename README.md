@@ -44,8 +44,8 @@ Instalación de dependencias:
 
 ### Fuentes externas:
 
-+ persistence.xml MAKIGAS -> https://gist.github.com/danirod/7b23abcd5157bd47f422e2042f86e903
-+ persistence.xml SQLITE -> https://gist.github.com/etissieres/5796622 
++ ORMLite -> http://ormlite.com/
++ ORMLite Raw SQL -> https://stackoverflow.com/questions/11987552/ormlite-joins-or-rawquery-auto-mapping
 
 ### TODO
 
