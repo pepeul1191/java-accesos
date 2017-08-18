@@ -21,7 +21,7 @@ Instalación de dependencias:
 - GET /item/listar_todos ->Controller_Item#listar_todos
 - GET /item/listar/@subtitulo_id ->Controller_Item#listar
 - POST /item/guardar ->Controller_Item#guardar
-- GET /modulo/listar/@sistema_id ->Controller_Modulo#listar
++ GET /modulo/listar/@sistema_id ->Controller_Modulo#listar
 - GET /modulo/listar_menu ->Controller_Modulo#listar_menu
 - POST /modulo/guardar ->Controller_Modulo#guardar
 - GET /subtitulo/listar/@modulo_id ->Controller_Subtitulo#listar

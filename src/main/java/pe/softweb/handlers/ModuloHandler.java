@@ -1,37 +1,38 @@
 package pe.softweb.handlers;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.json.JSONObject;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.support.ConnectionSource;
+import org.json.JSONObject;
+import pe.softweb.models.Modulo;
+import pe.softweb.utils.Conexion;
 import spark.Request;
 import spark.Response;
 import spark.Route;
-import pe.softweb.models.EstadoUsuario;
-import pe.softweb.utils.Conexion;
 
-public class EstadoUsuarioHandler {
+import java.util.ArrayList;
+import java.util.List;
+
+public class ModuloHandler {
     public static Route listar = (Request request, Response response) -> {
         String rpta = "";
 
         try {
+            int sistemaId = Integer.parseInt(request.params(":sistema_id"));
             Conexion conexion = new Conexion();
             ConnectionSource connectionSource = conexion.getConnectionSource();
 
             List<JSONObject> rptaTemp = new ArrayList<JSONObject>();
-            Dao<EstadoUsuario, String> estadoUsuarioDao = DaoManager.createDao(connectionSource, EstadoUsuario.class);
-            QueryBuilder<EstadoUsuario, String> queryBuilder = estadoUsuarioDao.queryBuilder();
-            PreparedQuery<EstadoUsuario> preparedQuery = queryBuilder.prepare();
-            List<EstadoUsuario> estadoUsuariosList = estadoUsuarioDao.query(preparedQuery);
+            Dao<Modulo, String> moduloDao = DaoManager.createDao(connectionSource, Modulo.class);
+            List<Modulo> moduloList = moduloDao.queryBuilder().where().eq("sistema_id", sistemaId).query();
 
-            for (EstadoUsuario estadoUsuario : estadoUsuariosList) {
+            for (Modulo modulo: moduloList) {
                 JSONObject obj = new JSONObject();
-                obj.put("id", estadoUsuario.getId());
-                obj.put("nombre", estadoUsuario.getNombre());
+                obj.put("id", modulo.getId());
+                obj.put("nombre", modulo.getNombre());
+                obj.put("url", modulo.getUrl());
                 rptaTemp.add(obj);
             }
 
@@ -40,7 +41,7 @@ public class EstadoUsuarioHandler {
             //e.printStackTrace();
             JSONObject rptaTry = new JSONObject();
             rptaTry.put("tipo_mensaje", "error");
-            String[] error = {"Se ha producido un error en  listar los estados de usuario", e.toString()};
+            String[] error = {"Se ha producido un error en  listar los módulos", e.toString()};
             rptaTry.put("mensaje", error);
             System.out.println( rptaTry.toString());
             return rptaTry;
