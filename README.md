@@ -21,7 +21,7 @@ Instalación de dependencias:
 
 ### TODO
 
-+ V
++ En las peticiones REST a métodos que usan ORMLite, manejar que en caso del catch devuelva el mensaje.
 
 ---
 

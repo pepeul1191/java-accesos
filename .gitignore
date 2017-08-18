@@ -4,6 +4,8 @@
 /target/classes/templates*
 /node_modules
 /src/main/resources/public/dist
+.idea/*
+spark-view.iml
 .project
 .settings
 target
