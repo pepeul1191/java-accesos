@@ -24,7 +24,7 @@ Instalación de dependencias:
 + GET /modulo/listar/@sistema_id ->Controller_Modulo#listar
 - GET /modulo/listar_menu ->Controller_Modulo#listar_menu
 - POST /modulo/guardar ->Controller_Modulo#guardar
-- GET /subtitulo/listar/@modulo_id ->Controller_Subtitulo#listar
++ GET /subtitulo/listar/@modulo_id ->Controller_Subtitulo#listar
 - POST /subtitulo/guardar ->Controller_Subtitulo#guardar
 - GET /permiso/listar/@sistema_id ->Controller_Permiso#listar
 - GET /permiso/listar_asociados/@sistema_id/@rol_id ->Controller_Permiso#listar_asociados
