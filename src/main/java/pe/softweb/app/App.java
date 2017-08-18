@@ -7,6 +7,7 @@ import java.util.Map;
 import pe.softweb.utils.Constantes;
 import pe.softweb.handlers.IndexHandler;
 import pe.softweb.handlers.EstadoUsuarioHandler;
+import pe.softweb.handlers.ItemHandler;
 import pe.softweb.handlers.ModuloHandler;
 import pe.softweb.handlers.SubtituloHandler;
 
@@ -46,6 +47,7 @@ public class App{
 
 		get("/", IndexHandler.index);
 		get("/estado_usuario/listar", EstadoUsuarioHandler.listar);
+		get("/item/listar/:subtitulo_id", ItemHandler.listar);
 		get("/modulo/listar/:sistema_id", ModuloHandler.listar);
 		get("/subtitulo/listar/:modulo_id", SubtituloHandler.listar);
 	}

@@ -19,7 +19,7 @@ Instalación de dependencias:
 + GET /estado_usuario/listar ->EstadoUsuarioHandler#listar
 - GET /item/listar/menu ->Controller_Item#menu
 - GET /item/listar_todos ->Controller_Item#listar_todos
-- GET /item/listar/@subtitulo_id ->Controller_Item#listar
++ GET /item/listar/@subtitulo_id ->Controller_Item#listar
 - POST /item/guardar ->Controller_Item#guardar
 + GET /modulo/listar/@sistema_id ->Controller_Modulo#listar
 - GET /modulo/listar_menu ->Controller_Modulo#listar_menu
