@@ -32,7 +32,7 @@ Instalación de dependencias:
 - GET /rol/listar/@sistema_id ->Controller_Rol#listar
 - POST /rol/guardar ->Controller_Rol#guardar
 - POST /rol/ascociar_permisos ->Controller_Rol#ascociar_permisos
-- GET /sistema/listar ->Controller_Sistema#listar
++ GET /sistema/listar ->Controller_Sistema#listar
 - POST /sistema/guardar ->Controller_Sistema#guardar
 - GET /usuario/listar ->Controller_Usuario#listar
 - GET /usuario/listar_accesos/@usuario_id ->Controller_Usuario#listar_accesos

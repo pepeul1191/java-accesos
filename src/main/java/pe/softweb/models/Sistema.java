@@ -13,8 +13,9 @@ public class Sistema implements Serializable {
     private String nombre;
     @DatabaseField(canBeNull = false, columnName = "version")
     private String version;
-    @DatabaseField(canBeNull = false, columnName = "respositorio")
+    @DatabaseField(canBeNull = false, columnName = "repositorio")
     private String repositorio;
+
     Sistema(){
 
     }
@@ -26,7 +27,4 @@ public class Sistema implements Serializable {
     public void setVersion(String version) { this.version = version; }
     public String getRepositorio() { return repositorio; }
     public void setRepositorio(String repositorio) { this.repositorio = repositorio; }
-    @Override
-    public String toString() { return "Sistema{" + "id=" + id + ", nombre='" + nombre + '\'' + ", version='" + version + '\'' + ", repositorio='" + repositorio + '\'' + '}';
-    }
 }
