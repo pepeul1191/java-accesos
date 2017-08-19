@@ -42,7 +42,9 @@ public class App{
 			//response.type("application/json");
 		});
 
-		get("/", IndexHandler.index);
+		get("/", AppHandler.index);
+		get("/login", AppHandler.login);
+
 		get("/estado_usuario/listar", EstadoUsuarioHandler.listar);
 		get("/item/listar/:subtitulo_id", ItemHandler.listar);
 		get("/modulo/listar/:sistema_id", ModuloHandler.listar);

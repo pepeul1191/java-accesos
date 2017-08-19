@@ -46,7 +46,7 @@ gulp.task('fonts', function() {
 gulp.task('layout-css', function() {
       gulp.src([MEDIA + 'bower_components/bootstrap/dist/css/bootstrap.min.css', MEDIA + 'bower_components/font-awesome/css/font-awesome.min.css'])
       .pipe(plumber())
-      .pipe(concatCss('styles.min.css'))
+      .pipe(concatCss('vendor.min.css'))
       .pipe(minifyCss())
       .pipe(replace('../../../font-awesome/fonts/', BASE_URL + 'dist/assets/'))
       .pipe(gulp.dest(DESTINO + 'assets'));
@@ -68,21 +68,28 @@ gulp.task('swp-plugins', function(){
 gulp.task('layout-js', function() {
     gulp.src([MEDIA + 'bower_components/jquery/dist/jquery.min.js', MEDIA + 'bower_components/bootstrap/dist/js/bootstrap.min.js', MEDIA + 'bower_components/underscore/underscore-min.js', MEDIA + 'bower_components/backbone/backbone-min.js', MEDIA + 'bower_components/handlebars/handlebars.min.js'])
     .pipe(plumber())
-    .pipe(concatJs('app.min.js'))
+    .pipe(concatJs('vendor.min.js'))
     .pipe(gulp.dest(DESTINO + 'assets'));
 });
 
 gulp.task('layout', ['fonts', 'layout-css', 'layout-js']);
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+gulp.task('styles', function() {
+      gulp.src([DESTINO + 'assets/vendor.min.css', MEDIA + 'assets/site/css/styles.css'])
+      .pipe(plumber())
+      .pipe(concatCss('styles.min.css'))
+      .pipe(minifyCss())
+      .pipe(gulp.dest(DESTINO + 'assets'));
+});
 
-gulp.task('departamentos', function(){
-	  gulp.src([DESTINO + 'assets/app.min.js',  MEDIA + 'assets/layouts/home.js',  MEDIA + 'assets/departamento/js/index.js'])
-	    //.pipe(uglify())
-	    .pipe(plumber())
-	    .pipe(concatJs('app.min.js'))
-	    .pipe(gulp.dest(DESTINO + 'departamento'))
-	    .pipe(livereload());
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+
+gulp.task('login', function(){
+	 gulp.src([DESTINO + 'assets/styles.min.css', MEDIA + 'assets/login/index.css'])
+     .pipe(plumber())
+     .pipe(concatCss('login.min.css'))
+    // .pipe(minifyCss())
+     .pipe(gulp.dest(DESTINO + 'assets'));
 });
 
 gulp.task('mantenimiento', function(){
@@ -93,6 +100,4 @@ gulp.task('mantenimiento', function(){
     .pipe(gulp.dest(DESTINO + 'home'))
     .pipe(livereload());
 });
-
-
 
