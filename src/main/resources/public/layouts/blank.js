@@ -1,4 +1,4 @@
-/*! layouts/home.js 
+/*! layouts/blank.js 
 	variables : BASE_URL, STATICS_URL, MODULOS_JSON, DATA
 */
 

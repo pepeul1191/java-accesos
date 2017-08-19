@@ -52,6 +52,19 @@ gulp.task('layout-css', function() {
       .pipe(gulp.dest(DESTINO + 'assets'));
 });
 
+gulp.task('swp-plugins', function(){
+    gulp.src([MEDIA + 'bower_components/swp-plugins/assets/js/mootools-core.min.js', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.min.js',
+                    MEDIA + 'bower_components/swp-plugins/assets/js/mootools-interfaces.min.js', MEDIA + 'bower_components/swp-plugins/assets/js/mootools-interfaces.min.js', MEDIA + 'bower_components/swp-plugins/assets/js/jquery.upload.js', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.autocomplete.js', MEDIA + 'bower_components/swp-plugins/assets/js/mootools-interfaces.min.js', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.dao', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.form', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.observer', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.grid', MEDIA + 'bower_components/swp-plugins/assets/js/mootools.chain'])
+        .pipe(plumber())
+        .pipe(concatJs('swp.js'))
+        .pipe(gulp.dest(DESTINO + 'assets'));
+
+     gulp.src([MEDIA + 'bower_components/swp-plugins/assets/css/mootools.autocomplete.css', MEDIA + 'bower_components/swp-plugins/assets/css/mootools.grid.css', MEDIA + 'bower_components/swp-plugins/assets/css/mootools.validations.css'])
+          .pipe(plumber())
+          .pipe(concatCss('swp.css'))
+          .pipe(gulp.dest(DESTINO + 'assets'));
+});
+
 gulp.task('layout-js', function() {
     gulp.src([MEDIA + 'bower_components/jquery/dist/jquery.min.js', MEDIA + 'bower_components/bootstrap/dist/js/bootstrap.min.js', MEDIA + 'bower_components/underscore/underscore-min.js', MEDIA + 'bower_components/backbone/backbone-min.js', MEDIA + 'bower_components/handlebars/handlebars.min.js'])
     .pipe(plumber())
@@ -72,7 +85,7 @@ gulp.task('departamentos', function(){
 	    .pipe(livereload());
 });
 
-gulp.task('home', function(){
+gulp.task('mantenimiento', function(){
   gulp.src([DESTINO + 'assets/app.min.js',  MEDIA + 'assets/layouts/home.js',  MEDIA + 'assets/home/js/index.js'])
     //.pipe(uglify())
     .pipe(plumber())

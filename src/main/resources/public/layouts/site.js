@@ -1,9 +1,15 @@
-/*! layouts/home.js 
+/*! layouts/site.js 
 	variables : BASE_URL, STATICS_URL, MODULOS_JSON, DATA
 */
 
 $( document ).ready(function() {
-	var home_template = $("#home-template").html();
+	$("#btn-to-navbar").click(function(){
+		$('html, body').animate({
+            scrollTop: $(".navbar").offset().top
+        }, 1000);
+	});
+
+	var home_template = $("#header-template").html();
 	var template = Handlebars.compile(home_template);
 
 	Handlebars.registerPartial("menu_modulos", $("#menu-modulos").html());
