@@ -93,11 +93,18 @@ gulp.task('login', function(){
 });
 
 gulp.task('mantenimiento', function(){
-  gulp.src([DESTINO + 'assets/app.min.js',  MEDIA + 'assets/layouts/home.js',  MEDIA + 'assets/home/js/index.js'])
+  gulp.start('fonts', 'layout-css', 'layout-js', 'swp-plugins', 'styles');
+	
+  gulp.src([DESTINO + 'assets/vendor.min.js', DESTINO + 'assets/swp.js'])
     //.pipe(uglify())
     .pipe(plumber())
-    .pipe(concatJs('app.min.js'))
+    .pipe(concatJs('mantenimiento.min.js'))
     .pipe(gulp.dest(DESTINO + 'home'))
     .pipe(livereload());
+  
+  gulp.src([DESTINO + 'assets/styles.min.css', DESTINO + 'assets/swp.css'])
+  .pipe(plumber())
+  .pipe(concatCss('mantenimiento.min.css'))
+  .pipe(gulp.dest(DESTINO + 'assets'));
 });
 
