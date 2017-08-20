@@ -99,7 +99,7 @@ gulp.task('mantenimiento', function(){
     //.pipe(uglify())
     .pipe(plumber())
     .pipe(concatJs('mantenimiento.min.js'))
-    .pipe(gulp.dest(DESTINO + 'home'))
+    .pipe(gulp.dest(DESTINO + 'a'))
     .pipe(livereload());
   
   gulp.src([DESTINO + 'assets/styles.min.css', DESTINO + 'assets/swp.css'])

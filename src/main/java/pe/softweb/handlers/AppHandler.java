@@ -13,14 +13,12 @@ import java.util.Map;
 public class AppHandler {
     public static Route index = (Request request, Response response) -> {
     	Map<String, Object> model = new HashMap<>();
-        model.put("partial", "templates/home/index.vtl");
+        model.put("partial", "templates/home/index.vm");
         model.put("title", "Mantenimiento - Accesós");
         model.put("css", Constantes.getMapita().get("STATIC_URL") + "dist/assets/mantenimiento.min.css");
-        model.put("js", Constantes.getMapita().get("STATIC_URL") + "dist/assets/mantenimiento.min.js");
-        
-        byte[] isoBytes = "José Ñato".getBytes("UTF-8");
-        model.put("data", new String(isoBytes, "ISO-8859-1"));
-        return App.renderTemplate("templates/layouts/home.vtl", model);
+        model.put("js", Constantes.getMapita().get("STATIC_URL") + "dist/assets/mantenimiento.min.js"); 
+        model.put("data", "");
+        return App.renderTemplate("templates/layouts/home.vm", model);
     };
 
     public static Route login = (Request request, Response response) -> {
