@@ -5,8 +5,11 @@ import static spark.Spark.*;
 import pe.softweb.handlers.*;
 import spark.*;
 import spark.template.velocity.*;
+
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 import pe.softweb.utils.Constantes;
+import pe.softweb.utils.HelperView;
 
 public class App{
 	public static void main(String[] args) {
@@ -54,6 +57,21 @@ public class App{
     
     public static String renderTemplate(String template, Map model) {
 		model.put("constantes", Constantes.getMapita());
-        return new VelocityTemplateEngine().render(new ModelAndView(model, template));
+		VelocityTemplateEngine vt = new VelocityTemplateEngine();
+		ModelAndView mv = new ModelAndView(model, template);		
+		String rptaLatin = vt.render(mv);
+		
+		try {
+			byte[] isoBytes = rptaLatin.getBytes("ISO-8859-1");
+			return new String(isoBytes, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "Error en codificación de vista Apache Velocity";
+		}
+		
+		//HelperView hv = new HelperView();
+		//rpta = hv.correcionUTF8(rpta);
+		
     }
 }
