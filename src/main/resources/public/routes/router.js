@@ -32,7 +32,7 @@ routes: {
 		//alert(sistema_id);
 		var menuView = new MenuView({});
 		menuView.render();
-		//sistemaMenuView.mostrarTabla();
+		menuView.mostrarTabla(sistema_id);
 	},
 });
 

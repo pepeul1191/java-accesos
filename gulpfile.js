@@ -124,6 +124,7 @@ gulp.task('mantenimiento', function(){
 	  MEDIA + 'layouts/mantenimiento.js', 
 	  MEDIA + 'views/usuario.js', 
 	  MEDIA + 'views/_table_sistema.js', 
+	  MEDIA + 'views/_table_menu.js', 
 	  MEDIA + 'views/sistema.js', 
 	  MEDIA + 'views/menu.js', 
 	  MEDIA + 'routes/router.js'])

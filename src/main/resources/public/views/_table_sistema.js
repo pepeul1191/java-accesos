@@ -1,4 +1,4 @@
-var array_json_th = [
+var sistema_array_json_th = [
 	{titulo:"id", index: "id", estilos:"width: 10px; display:none;"},
 	{titulo:"Nombre",index:"nombre",estilos:"width: 250px;"},
     {titulo:"Versión",index:"version",estilos:"width: 100px;"},
@@ -6,7 +6,7 @@ var array_json_th = [
 	{titulo:"Botones",index:"NA",estilos:"width: 80px;"}
 ];
 
-var array_json_td = [
+var sistema_array_json_td = [
 	{tipo:"label_id",estilos:"color: blue; display:none", index:"id", edicion:""},
 	{tipo:"text",estilos:"width:250px;", index:"nombre", edicion:""},
     {tipo:"text",estilos:"width:100px;", index:"version", edicion:""},
@@ -14,14 +14,14 @@ var array_json_td = [
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 
-var array_json_btn_td = [
+var sistema_array_json_btn_td = [
 	{clase:"fa fa-chevron-right", href:"#/accesos/sistemas/menu/", alt:"Gestionar Menú",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
 	{clase:"fa fa-list",url:"#",alt:"Gestionar Permisos",estilos:"padding-left: 2px;", operacion:"GestionarPermisos"},
 	{clase:"fa fa-id-card-o",url:"#",alt:"Gestionar Roles",estilos:"padding-left: 2px;", operacion:"GestionarRoles"},
 	{clase:"fa fa-times",url:"",alt:"Eliminar capa",estilos:"padding-left: 2px;", operacion:"QuitarFila"}
 ]; 
 
-var array_json_btn = [
+var sistema_array_json_btn = [
 	{tipo: "agrega_fila", operacion:"AgregarFila", icono: "fa fa-plus", label: "Agregar Registro", clase: "boton-tabla  mootools"},
 	{tipo: "guardar_tabla", operacion:"GuardarTabla", icono: "fa fa-check", label: "Guardar Cambios", clase: "boton-tabla  mootools" }
 ];

@@ -28,9 +28,9 @@ var SistemaView = Backbone.View.extend({
 	   	var tablaSistemas = new Grid();
 	   	tablaSistemas.SetTableId("tablaSistemas");
 	   	tablaSistemas.SetTableObj("tablaSistemas");
-	   	tablaSistemas.SetTableHeader(array_json_th);
-	   	tablaSistemas.SetTableBody(array_json_td, array_json_btn_td, ajax_dao_tipo_activos);
-	   	tablaSistemas.SetTableFooter(array_json_btn, false);
+	   	tablaSistemas.SetTableHeader(sistema_array_json_th);
+	   	tablaSistemas.SetTableBody(sistema_array_json_td, sistema_array_json_btn_td, ajax_dao_tipo_activos);
+	   	tablaSistemas.SetTableFooter(sistema_array_json_btn, false);
 	   	tablaSistemas.SetLabelMensaje("#txtMensajeRpta");
 	   	tablaSistemas.SetURLGuardar(BASE_URL + "sistema/guardar");
 
