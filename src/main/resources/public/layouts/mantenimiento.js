@@ -20,10 +20,14 @@ $( document ).ready(function() {
 
 Handlebars.registerHelper( "menuSubmodulos", function (){
 	var rpta = '<ul>';
-	console.log(SUBMODULOS_JSON);
+	//console.log(SUBMODULOS_JSON);
 	SUBMODULOS_JSON.forEach(function(submodulo) {
-		console.log(submodulo.subtitulo);
-	    rpta = rpta + "<li>" + submodulo.subtitulo + "</li>";
+		//console.log(submodulo.items);
+	    rpta = rpta + "<li>" + submodulo.subtitulo + "<ul>";
+	    submodulo.items.forEach(function(item){
+	    		rpta = rpta + "<li><a href='"+ BASE_URL + item.url  + "'>" + item.item + "</a></li>";
+	    });
+	    rpta = rpta + "</ul></li>";
 	});
 	return rpta + "</ul>";    
 });

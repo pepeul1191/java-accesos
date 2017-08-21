@@ -24,9 +24,9 @@ public class AppHandler {
     		menuJSONArray.put(usuariosJSONObject);
     		
     		JSONObject sistemasJSONObject = new JSONObject(); JSONArray sistemasJSONArrayItems = new JSONArray();
-    		tempJSONObject.put("item", "Listado"); tempJSONObject.put("url", "#/accesos/sistemas"); 
-    		sistemasJSONArrayItems.put(tempJSONObject);
-    		sistemasJSONObject.put("subtitulo", "Sistemas"); usuariosJSONObject.put("items", sistemasJSONArrayItems); 
+    		JSONObject temp0JSONObject = new JSONObject(); temp0JSONObject.put("item", "Listado"); temp0JSONObject.put("url", "#/accesos/sistemas"); 
+    		sistemasJSONArrayItems.put(temp0JSONObject);
+    		sistemasJSONObject.put("subtitulo", "Sistemas"); sistemasJSONObject.put("items", sistemasJSONArrayItems); 
     		menuJSONArray.put(sistemasJSONObject);
     		
     		JSONObject logsJSONObject = new JSONObject(); JSONArray logsJSONArrayItems = new JSONArray();
