@@ -13,6 +13,7 @@ hr { border-top: 1px solid #e7e7e7;}
 #menu-izq{padding-left: 0px;}
 .list-group-item-titulo{background-color: #f8f8f8;}
 .list-group-elemento{padding-left:30px;}
+.panel {border-radius:0px}
 /*Inicio Footer*/
 footer{background-color:#f8f8f8; width:100%; bottom:0; border-color: #e7e7e7; color: #777; border: 1px solid transparent; border-color: #e7e7e7; margin-top: 30px;}
 #btn-to-navbar:hover{cursor: pointer;}

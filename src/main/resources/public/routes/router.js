@@ -8,41 +8,25 @@ Archivos que usa :
 
 var Router = Marionette.AppRouter.extend({
 routes: {
-    'email/:email': 'showEmail',
-    "" : "showHome", 
-	"buscar" : "showBuscar",
-	"contacto" : "showContacto",
-	"registro" : "showRegistro",
-	"login" : "showLogin", 
-	"*actions" : "showHome"
-  },
-  showEmail: function(email) {
-    // show the email
-    alert(email);
-  },
-  	showHome: function(){
-		var homeView = new HomeView({});
-		homeView.render();
+	    'email/:email': 'showEmail',
+	    "" : "showUsuarios", 
+		"accesos/usuarios" : "showUsuarios",
+		"accesos/sistemas" : "showSistemas",
+		"*actions" : "showUsuarios"
 	},
-	showBuscar: function(){
-		var buscarView = new BuscarView({});
-		buscarView.render();
+	showEmail: function(email) {
+	    // show the email
+	    alert(email);
 	},
-	showContacto: function(){
-		//var contactoView = new ContactoView({});
-		//contactoView.render();
-		$('html, body').animate({
-            scrollTop: $("#contacto").offset().top
-        }, 1000);
+	showUsuarios: function(){
+		var usuarioView = new UsuarioView({});
+		usuarioView.render();
 	},
-	showRegistro: function(){
-		var registroView = new RegistroView({});
-		registroView.render();
+	showSistemas: function(){
+		var sistemaView = new SistemaView({});
+		sistemaView.render();
+		sistemaView.mostrarTabla();
 	},
-	showLogin: function(){
-		var loginView = new LoginView({});
-		loginView.render();
-	}
 });
 
 const App = Marionette.Application.extend({

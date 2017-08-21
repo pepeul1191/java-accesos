@@ -1,5 +1,5 @@
-var ContactoView = Backbone.View.extend({
-	el: '#body-app',
+var UsuarioView = Backbone.View.extend({
+	el: '#workspace',
 	initialize: function(){
 		//this.render();
 		//console.log("initialize");
@@ -12,7 +12,7 @@ var ContactoView = Backbone.View.extend({
 		var data = { };
 		var template_compiled = null;
 		$.ajax({
-		   url: STATICS_URL + 'templates/contacto.html', 
+		   url: STATICS_URL + 'templates/usuario.html', 
 		   type: "GET", 
 		   async: false, 
 		   success: function(source) {
@@ -23,18 +23,3 @@ var ContactoView = Backbone.View.extend({
 		return template_compiled;
 	}
 });
-
-
-/*
-
-	render: function() {
-		var data = { };
-		var source = $('#ConcatoTemplate').html();
-		var template = Handlebars.compile(source);
-		var template_compiled = template(data);
-		console.log("RENDER???? 2");
-		this.$el.html(template_compiled);
-		console.log("RENDER???? 1");
-		 return this;
-	}
-*/

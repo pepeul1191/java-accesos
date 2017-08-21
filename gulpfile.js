@@ -122,8 +122,10 @@ gulp.task('mantenimiento', function(){
 	  DESTINO + 'assets/vendor.min.js', 
 	  DESTINO + 'assets/swp.js',
 	  MEDIA + 'layouts/mantenimiento.js', 
-	  //MEDIA + 'routes/router.js'
-	  ])
+	  MEDIA + 'views/usuario.js', 
+	  MEDIA + 'views/_table_sistema.js', 
+	  MEDIA + 'views/sistema.js', 
+	  MEDIA + 'routes/router.js'])
 //.pipe(uglify())
   .pipe(plumber())
   .pipe(concatJs('mantenimiento.min.js'))
