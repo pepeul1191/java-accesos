@@ -3,17 +3,9 @@
 */
 
 $( document ).ready(function() {
-	alert("XD");
-	$("#btn-to-navbar").click(function(){
-		$('html, body').animate({
-            scrollTop: $(".navbar").offset().top
-        }, 1000);
-	});
-
-	var home_template = $("#header-template").html();
-	var template = Handlebars.compile(home_template);
-
-	Handlebars.registerPartial("menu_modulos", $("#menu-modulos").html());
+	var mantenimiento_template = $("#mantenimiento-template").html();
+	var template = Handlebars.compile(mantenimiento_template);
+	Handlebars.registerPartial("menu_submodulos", $("#menu-submodulos").html());
 	Handlebars.registerPartial("yield", $("#yield").html());
 
 	var data = {
@@ -23,15 +15,17 @@ $( document ).ready(function() {
 	};
 	var template_compiled = template(data);
 
-	$("#header-app").html(template_compiled);
+	$("#body-workspace").html(template_compiled);
 });
 
-Handlebars.registerHelper( "menuModulos", function (){
-	var rpta = '';
-	MODULOS_JSON.forEach(function(modulo) {
-	    rpta = rpta + '<li><a href="' + BASE_URL + modulo['url'] + '">' + modulo['nombre'] + '</a></li>';
+Handlebars.registerHelper( "menuSubmodulos", function (){
+	var rpta = '<ul>';
+	console.log(SUBMODULOS_JSON);
+	SUBMODULOS_JSON.forEach(function(submodulo) {
+		console.log(submodulo.subtitulo);
+	    rpta = rpta + "<li>" + submodulo.subtitulo + "</li>";
 	});
-	return rpta;    
+	return rpta + "</ul>";    
 });
 
 Handlebars.registerHelper('getValue', function(obj, key) {
