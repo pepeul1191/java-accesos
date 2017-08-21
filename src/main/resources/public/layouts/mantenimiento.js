@@ -19,17 +19,17 @@ $( document ).ready(function() {
 });
 
 Handlebars.registerHelper( "menuSubmodulos", function (){
-	var rpta = '<ul>';
+	var rpta = '';
 	//console.log(SUBMODULOS_JSON);
 	SUBMODULOS_JSON.forEach(function(submodulo) {
-		//console.log(submodulo.items);
-	    rpta = rpta + "<li>" + submodulo.subtitulo + "<ul>";
+		//console.log(submodulo);
+	    rpta = rpta + "<li class='list-group-item list-group-item-titulo'>" + submodulo.subtitulo + "</li>";
+	    //<a href="#" class="list-group-item">Cras justo odio</a>
 	    submodulo.items.forEach(function(item){
-	    		rpta = rpta + "<li><a href='"+ BASE_URL + item.url  + "'>" + item.item + "</a></li>";
+	    		rpta = rpta + "<li class='list-group-item list-group-elemento'><a href='"+ BASE_URL + item.url  + "'>" + item.item + "</a></li>";
 	    });
-	    rpta = rpta + "</ul></li>";
 	});
-	return rpta + "</ul>";    
+	return rpta;    
 });
 
 Handlebars.registerHelper('getValue', function(obj, key) {

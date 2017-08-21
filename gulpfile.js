@@ -101,7 +101,7 @@ gulp.task('styles', function() {
       gulp.src([DESTINO + 'assets/vendor.min.css', MEDIA + 'assets/site/css/styles.css'])
       .pipe(plumber())
       .pipe(concatCss('styles.min.css'))
-      .pipe(minifyCss())
+      //.pipe(minifyCss())
       .pipe(gulp.dest(DESTINO + 'assets'));
 });
 
@@ -124,7 +124,6 @@ gulp.task('mantenimiento', function(){
 	  MEDIA + 'layouts/mantenimiento.js', 
 	  //MEDIA + 'routes/router.js'
 	  ])
-
 //.pipe(uglify())
   .pipe(plumber())
   .pipe(concatJs('mantenimiento.min.js'))

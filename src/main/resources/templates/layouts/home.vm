@@ -39,7 +39,11 @@
    <div class="container" id="body-workspace"></div>
    <script id="mantenimiento-template" type="text/x-handlebars-template">
    		<div class="col-md-3 sidebar" id="menu-izq">
-			{{> menu_submodulos}}
+			<div class="panel panel-default">
+                <ul class="list-group">
+                    {{> menu_submodulos}}
+                </ul>
+            </div>
 		</div>
    		<div class="col-md-9" id="workspace">
    			{{> yield}}
