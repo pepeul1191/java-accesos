@@ -27,13 +27,14 @@ var MenuView = Backbone.View.extend({
 		return template_compiled;
 	},
 	mostrarTabla: function(sistema_id){
+		tablaModulos.BorrarTable();
 		var ajax_modulo = new AjaxPython(); 
 		ajax_modulo.Constructor("GET", BASE_URL + "modulo/listar/" + sistema_id, "", false);
 	   	tablaModulos.SetTableId("tablaModulos");
 	   	tablaModulos.SetTableObj("tablaModulos");
-	   	tablaModulos.SetTableHeader(array_json_th);
-	   	tablaModulos.SetTableBody(array_json_td, array_json_btn_td, ajax_modulo);
-	   	tablaModulos.SetTableFooter(array_json_btn, false);
+	   	tablaModulos.SetTableHeader(array_json_th_modulo);
+	   	tablaModulos.SetTableBody(array_json_td_modulo, array_json_btn_td_modulo, ajax_modulo);
+	   	tablaModulos.SetTableFooter(array_json_btn_modulo, false);
 	   	tablaModulos.SetLabelMensaje("#txtMensajeRptaModal");
 	   	tablaModulos.SetExtraData(array_extra_data_modulo);
 	   	tablaModulos.SetURLGuardar(BASE_URL + "accesos/modulo/guardar");

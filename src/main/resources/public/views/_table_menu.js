@@ -1,23 +1,23 @@
-var array_json_th = [
+var array_json_th_modulo = [
 	{titulo:"id", index: "id", estilos:"width: 10px; display:none;"},
 	{titulo:"Nombre",index:"nombre",estilos:"width: 90px;"},
 	{titulo:"Url",index:"url",estilos:"width: 90px;"},
 	{titulo:"Botones",index:"NA",estilos:"width: 10px;"}
 ];
 
-var array_json_td = [
+var array_json_td_modulo = [
 	{tipo:"label_id",estilos:"color: blue; display:none", index:"id", edicion:""},
 	{tipo:"text",estilos:"width:90px;", index:"nombre", edicion:""},
 	{tipo:"text",estilos:"width:90px;", index:"url", edicion:""},
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 
-var array_json_btn_td = [
-	{clase:"fa fa-chevron-right",url:"#",alt:"Gestionar subtitulos",estilos:"padding-left: 20px;", operacion:"MostrarSubtitulos"},
-	{clase:"fa fa-times",url:"#",alt:"Eliminar módulo",estilos:"padding-left: 10px;", operacion:"QuitarFila"}
+var array_json_btn_td_modulo = [
+	{clase:"fa fa-chevron-right",url:"",alt:"Gestionar subtitulos",estilos:"padding-left: 20px;", operacion:"MostrarSubtitulos"},
+	{clase:"fa fa-times",url:"",alt:"Eliminar módulo",estilos:"padding-left: 10px;", operacion:"QuitarFila"}
 ]; 
 
-var array_json_btn = [
+var array_json_btn_modulo = [
 	{tipo: "agrega_fila", operacion:"AgregarFila", icono: "fa fa-plus", label: "Agregar Registro", clase: "boton-tabla  mootools"},
 	{tipo: "guardar_tabla", operacion:"GuardarTabla", icono: "fa fa-check", label: "Guardar Cambios", clase: "boton-tabla  mootools" }
 ];
@@ -62,7 +62,7 @@ var MostrarSubtitulos = new Class({
 			];
 
 			var array_json_btn_td = [
-				{clase:"fa fa-th-list",url:"#",alt:"Cargar Provincias",estilos:"padding-left: 23px;", operacion:"MostrarItems"}, 
+				{clase:"fa fa-th-list",url:"",alt:"Cargar Provincias",estilos:"padding-left: 23px;", operacion:"MostrarItems"}, 
 				{clase:"fa fa-times",url:"#",alt:"Quitar Fila",estilos:"padding-left: 23px;", operacion:"QuitarFila"}
 			]; 
 
@@ -76,7 +76,7 @@ var MostrarSubtitulos = new Class({
 			];
 
 			var ajax_subtitulos = new AjaxPython(); 
-			ajax_subtitulos.Constructor("GET", BASE_URL + "accesos/subtitulo/listar/" + id_modulo, "", false);
+			ajax_subtitulos.Constructor("GET", BASE_URL + "subtitulo/listar/" + id_modulo, "", false);
 
 			tablaSubtitulos.SetTableId("tablaSubtitulos");
 			tablaSubtitulos.SetTableObj("tablaSubtitulos");
@@ -88,9 +88,8 @@ var MostrarSubtitulos = new Class({
 			tablaSubtitulos.SetExtraData(array_extra_data);
 
 			$("#id_modulo").html(id_modulo);
-           
           	tablaSubtitulos.MostrarTable();
-           //ObservadorConcreto.NotificarObservadores(objeto.observador, tipo_arreglo, id_fila);
+          	//ObservadorConcreto.NotificarObservadores(objeto.observador, tipo_arreglo, id_fila);
         }else{
              try {
               this.SiguienteEslabon(operacion, thisDOM, objeto);
@@ -147,7 +146,7 @@ var MostrarItems = new Class({
 			];
 			
 			var ajax_dao_subtitulos = new AjaxPython(); 
-			ajax_dao_subtitulos.Constructor("GET", BASE_URL + "accesos/item/listar/" + id_subtitulo, "", false);
+			ajax_dao_subtitulos.Constructor("GET", BASE_URL + "item/listar/" + id_subtitulo, "", false);
 
 			tablaItems.SetTableId("tablaItems");
 			tablaItems.SetTableObj("tablaItems");
@@ -182,4 +181,5 @@ $(document).on("click", ".mootools", function() {
     var operacion = this.get("operacion"); console.log(operacion);
 
     eslabon_1.EjecutarOperacion(operacion, $(this), objeto);
+    return false;
 });
