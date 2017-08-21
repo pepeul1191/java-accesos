@@ -12,6 +12,7 @@ routes: {
 	    "" : "showUsuarios", 
 		"accesos/usuarios" : "showUsuarios",
 		"accesos/sistemas" : "showSistemas",
+		"accesos/sistemas/menu/:sistema_id" : "showSistemaMenu",
 		"*actions" : "showUsuarios"
 	},
 	showEmail: function(email) {
@@ -26,6 +27,12 @@ routes: {
 		var sistemaView = new SistemaView({});
 		sistemaView.render();
 		sistemaView.mostrarTabla();
+	},
+	showSistemaMenu: function(sistema_id){
+		//alert(sistema_id);
+		var menuView = new MenuView({});
+		menuView.render();
+		//sistemaMenuView.mostrarTabla();
 	},
 });
 

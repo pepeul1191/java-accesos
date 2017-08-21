@@ -8,6 +8,10 @@
     <script type="text/javascript">var BASE_URL = '$constantes.get("BASE_URL")';</script>
 </head>
 <body>
+	<!-- Inicio Modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-container"  id="btnModal" style="display: none" >Launch demo modal</button>
+    <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>
+    <!-- Fin Modal -->
     #parse($partial)
     <script type="text/javascript" src="$js"></script>
 </body>
