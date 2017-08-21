@@ -1,10 +1,11 @@
+body{font-size:12px !important; color:#343434; }
 label{font-weight: 400;}
 .form-control, .btn{border-radius: 0px;}
 .navbar-brand > .icon-brand {position: relative; float: left; font-size: 25px; margin-right: 10px;}
 #logo-navbar{position: relative; float: left; margin-right: 10px;}
 #body-app{position: relative;}
 footer{position: relative; bottom: 0; width: 100%; background-color: #f5f5f5; padding: 15px; margin-top: 20px;}
-.navbar-brand{padding-top: 13px;}
+.navbar-brand{padding-top: 13px; font-size: 16px;}
 .navbar-brand>span {margin-top: 2px; position: relative; float: left;}
 .texto-validacion{color:#a94442; margin-left: 10px}
 .btn>i{margin-right: 10px;}
@@ -18,3 +19,8 @@ hr { border-top: 1px solid #e7e7e7;}
 footer{background-color:#f8f8f8; width:100%; bottom:0; border-color: #e7e7e7; color: #777; border: 1px solid transparent; border-color: #e7e7e7; margin-top: 30px;}
 #btn-to-navbar:hover{cursor: pointer;}
 /*Fin Footer*/
+/*Inicio mootoolsGrid*/
+td,th {padding-top: 10px  !important; padding-bottom: 10px  !important;}
+.boton-tabla {color: #fff !important;background-color: #337ab7 !important;border-color: #2e6da4 !important; font-size:12px;}
+.boton-tabla:hover {color: #fff !important;background-color: #286090 !important;border-color: #204d74 !important; font-size:12px;}
+/*Fin mootoolsGrid*/

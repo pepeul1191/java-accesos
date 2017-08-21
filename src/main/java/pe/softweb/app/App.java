@@ -18,7 +18,7 @@ public class App{
 		staticFiles.header("Access-Control-Allow-Origin", "*");
 		staticFiles.header("Access-Control-Request-Method",  "*");
 		staticFiles.header("Access-Control-Allow-Headers",  "*");
-		staticFiles.expireTime(600);
+		//staticFiles.expireTime(600);
 		port(2000);
 
 		options("/*", (request, response) -> {
