@@ -1,9 +1,6 @@
 /*
 Archivos que usa :
-	+ views/buscar.js
-	+ views/contacto.js
-	+ views/registro.js
-	+ views/login.js
+	+ views/
 */
 
 var Router = Marionette.AppRouter.extend({

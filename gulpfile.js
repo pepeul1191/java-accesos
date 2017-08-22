@@ -125,8 +125,12 @@ gulp.task('mantenimiento', function(){
 	  MEDIA + 'views/usuario.js', 
 	  MEDIA + 'views/_table_sistema.js', 
 	  MEDIA + 'views/_table_menu.js', 
+	  MEDIA + 'views/_table_permiso.js', 
+	  MEDIA + 'views/_table_rol.js', 
 	  MEDIA + 'views/sistema.js', 
 	  MEDIA + 'views/menu.js', 
+	  MEDIA + 'views/permiso.js', 
+	  MEDIA + 'views/rol.js', 
 	  MEDIA + 'routes/router.js'])
 //.pipe(uglify())
   .pipe(plumber())

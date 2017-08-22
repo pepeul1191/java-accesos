@@ -16,8 +16,8 @@ var sistema_array_json_td = [
 
 var sistema_array_json_btn_td = [
 	{clase:"fa fa-chevron-right", href:"#/accesos/sistemas/menu/", alt:"Gestionar Menú",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
-	{clase:"fa fa-list",url:"#",alt:"Gestionar Permisos",estilos:"padding-left: 2px;", operacion:"GestionarPermisos"},
-	{clase:"fa fa-id-card-o",url:"#",alt:"Gestionar Roles",estilos:"padding-left: 2px;", operacion:"GestionarRoles"},
+	{clase:"fa fa-list",url:"#/accesos/sistemas/permiso/",alt:"Gestionar Permisos",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"irURL"},
+	{clase:"fa fa-id-card-o",url:"#/accesos/rol/menu/",alt:"Gestionar Roles",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"irURL"},
 	{clase:"fa fa-times",url:"",alt:"Eliminar capa",estilos:"padding-left: 2px;", operacion:"QuitarFila"}
 ]; 
 
