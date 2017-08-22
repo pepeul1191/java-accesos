@@ -13,6 +13,8 @@ routes: {
 		"accesos/usuarios" : "showUsuarios",
 		"accesos/sistemas" : "showSistemas",
 		"accesos/sistemas/menu/:sistema_id" : "showSistemaMenu",
+		"accesos/sistemas/permiso/:sistema_id" : "showSistemaPermiso",
+		"accesos/sistemas/rol/:sistema_id" : "showSistemaRol",
 		"*actions" : "showUsuarios"
 	},
 	showEmail: function(email) {
@@ -29,10 +31,19 @@ routes: {
 		sistemaView.mostrarTabla();
 	},
 	showSistemaMenu: function(sistema_id){
-		//alert(sistema_id);
 		var menuView = new MenuView({});
 		menuView.render();
 		menuView.mostrarTabla(sistema_id);
+	},
+	showSistemaPermiso: function(sistema_id){
+		var permisoView = new PermisoView({});
+		permisoView.render();
+		permisoView.mostrarTabla(sistema_id);
+	},
+	showSistemaRol: function(sistema_id){
+		var rolView = new RolView({});
+		rolView.render();
+		rolView.mostrarTabla(sistema_id);
 	},
 });
 
